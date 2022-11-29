@@ -25,6 +25,18 @@ class KosarModel{
             this.#kosaram[this.#kosaram.length - 1].db = 1;
         }
     };
+    setKosar2(adat){
+        let azonosElem = this.#kosaram.findIndex((elem)=>{
+            return elem.id == adat.id;
+        });
+        if (azonosElem >= 0) {
+            this.#kosaram[azonosElem].db--;
+        }
+        else{
+            this.#kosaram.push(adat);
+            this.#kosaram[this.#kosaram.length - 1].db = 1;
+        }
+    };
 
     getDarab(){
         return this.#kosaram.length;
@@ -39,7 +51,7 @@ class KosarModel{
         return ossz
     };
     setPlusz(){
-        
+
     }
 
     

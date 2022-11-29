@@ -45,13 +45,11 @@ function App() {
   }
 
   function Minusz(adat){
-    console.log(adat)
-    setKosardb(kosarmodel.setKosar(adat))
+    kosarmodel.setKosar(adat);
+    setKosaram(kosarmodel.getKosaram2());
   }
 
   function Torles(adat){
-    console.log(adat)
-    setKosardb(kosarmodel.setKosar(adat))
   }
 
   return (
